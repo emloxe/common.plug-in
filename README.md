@@ -2,8 +2,8 @@ README.md
 # 常用插件整理
 
 ## 目录
- 1.[jQuery Lazy Load 图片延迟加载](#lazyLoad)
- 2.[jQuery Echo 图片延迟加载](#echo)
+* [jQuery Lazy Load 图片延迟加载](#lazyLoad)
+* [jQuery Echo 图片延迟加载](#echo)
 
 
 ## <a id="lazyLoad" href="jquery_lazyload">jQuery Lazy Load 图片延迟加载</a>
@@ -34,15 +34,15 @@ $('img.lazy').lazyload();
 
 ### 参数配置
 
-| 名称          | 默认值        | 说明  |
-| ------------- |:-------------:| -----:|
+| 名称          | 默认值        |说明  |
+| ------------- |:-------------:|:-----|
 | container     |	window      |	父容器。延迟加载父容器中的图片 |
 | event     	|'scroll'       |	触发加载的事件 |
 | effect        |	'show'      |	加载使用的动画效果，如 show, fadeIn, slideDown 等 jQuery 自带的效果，或者自定义动画。 |
 |effectspeed    |	undefined   |	动画时间。作为 effect 的参数使用：effect(effectspeed)|
 | data_attribute|	'original'  |	真实图片地址的 data 属性后缀|
 | threshold 	|    0          | 	灵敏度。默认为 0 表示当图片出现在显示区域中的立即加载显示；设为整数表示图片距离 x 像素进入显示区域时进行加载；设为负数表示图片进入显示区域 x 像素时进行加载。|
-| failure_limit |    0          |	容差范围。页面滚动时，Lazy Load 会遍历延迟加载的图片，检查是否在显示区域内，默认找到第 1 张不可见的图片时，就终止遍历。因为 Lazy Load 认为图片的排序是与 HTML 中的代码中的排序相同，但是也可能会出现例外，通过该值来扩大容差范围|
+| failure_limit |    0          |	容差范围。页面滚动时，Lazy Load 会遍历延迟加载的图片，检查是否在显示区域内，默认找到第 1 张不可见的图片时，就终止遍历。因为 Lazy Load 认为图片的排序是与 HTML 中的代码中的排序相同，但是也可能会出现例外，通过该值来扩大容差范围 |
 | skip_invisible|	 true       |	跳过隐藏的图片。图片不可见时（如 display:none），不强制加载。|
 |appear 	    |    null       |	图片加载时的事件 (Function)，有 2 个参数：elements_left（未加载的图片数量）、settings（lazyload 的参数）|
 |load       	|    null       |	图片加载后的事件 (Function)，有 2 个参数，同 appear |
@@ -89,7 +89,7 @@ echo.init({
 ### 参数配置
 
 | 名称          | 默认值        | 说明  |
-| ------------- |:-------------:| -----:|
+| ------------- |:-------------:| :-----|
 | offset        |	0           |	离可视区域多少像素的图片可以被加载 |
 | throttle     	|   250         |	图片延迟多少毫秒加载 |
 | debounce      |	true        |	By default the throttling function is actually a debounce function so that the checking function is only triggered after a user stops scrolling. To use traditional throttling where it will only check the images every throttle milliseconds, set debounce to false. |
