@@ -1,12 +1,17 @@
-
 # 常用插件整理
 
 ## 目录
 * [jQuery Lazy Load 图片延迟加载](#lazyLoad)
 * [jQuery Echo 图片延迟加载](#echo)
+* [jQuery 无缝向上滚动](#rolling)
+* [OwlCarousel2 轮播](#OwlCarousel)
+
+
+
 
 
 ## <a id="lazyLoad" href="jquery_lazyload">jQuery Lazy Load 图片延迟加载</a>
+依赖jquery，图片延迟加载
 
 ### 使用方法
 
@@ -57,6 +62,12 @@ $('img.lazy').lazyload();
 
 
 
+
+
+
+
+
+
 ## <a id="echo" href="echo">Echo 图片延迟加载</a>
 
 和 Lazy Load 一样，Echo.js 也是一个用于图像延迟加载 JavaScript。不同的是 Lazy Load 是基于 jQuery 的插件，而 Echo.js 不依赖于 jQuery 或其他 JavaScript 库，可独立使用。并且 Echo.js 非常小巧，压缩后不足 1KB。
@@ -103,3 +114,141 @@ callback |
 
 **备注**
 [详细信息](https://github.com/toddmotto/echo)
+
+
+
+
+
+
+
+
+
+## <a id="rolling" href="jQuery-rolling">jQuery 无缝向上滚动</a>
+基于 jQuery 的简单的向上滚动效果插件
+
+
+### 使用方法
+
+载入js文件
+```html
+<script src="js/jquery.min.js"></script>
+<script src="js/scroll.js"></script>
+```
+
+html结构
+```html
+<!-- 类名可以随便写 -->
+<div class="myscroll">
+    <ul>
+        <li>用FlexSlider制作支付宝2013版幻灯片</li>
+        <li>扁平化UI/Flat UI Kit(PSD)</li>
+        <li>童趣卡通圣诞老人矢量素材(EPS)</li>
+    </ul>
+</div>
+```
+
+css中必填
+```css
+/* class名需要和div类名对应 */
+.myscroll {
+    width: 300px;
+    height: 260px;
+    overflow: hidden;
+}
+```
+
+调用 myScroll
+```js
+//这里$('.myscroll')要和html中对应上
+$('.myscroll').myScroll({
+    speed: 40, //数值越大，速度越慢
+    rowHeight: 26 //li的高度
+});
+```
+
+
+### 参数配置
+
+| 名称          | 默认值        | 说明  |
+|:-------------:|:-------------:| :-----|
+| speed         |	40          |	滚动速度，值越大速度越慢 |
+| rowHeight    	|   24          |	每行的高度，单位为 px |
+
+
+### 预览
+[demo展示](https://emloxe.github.io/common.plug-in/jQuery-rolling/demo/index.html)
+
+
+
+
+
+
+
+
+## <a id="OwlCarousel" href="OwlCarousel2">OwlCarousel2 轮播</a>
+强大的轮播插件，移动设备上的触摸支持，弹性布局
+[官方展示](http://owlcarousel2.github.io/OwlCarousel2/demos/demos.html)
+[官方配置文档](http://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html)
+支持IE7+
+
+### 使用方法
+
+引入css文件
+```css
+<link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+```
+
+载入js文件
+```html
+<script src="jquery.min.js"></script>
+<script src="owlcarousel/owl.carousel.min.js"></script>
+```
+
+HTML结构
+```html
+<div class="owl-carousel">
+  <div> Your Content </div>
+  <div> Your Content </div>
+  <div> Your Content </div>
+  <div> Your Content </div>
+  <div> Your Content </div>
+  <div> Your Content </div>
+  <div> Your Content </div>
+</div>
+```
+
+调用
+```js
+$(".owl-carousel").owlCarousel();
+```
+
+
+### 参数配置
+
+| 名称          | 默认值        |说明  |
+|:-------------:|:-------------:|:-----|
+| items         |	3           | 展示几个item |
+| margin     	|   0           | item右边距 |
+| loop          |	false       | |
+| center        |	false       | |
+| mouseDrag     |	ture        | 鼠标是否可以拖动item |
+| touchDrag 	|   ture        | |
+| pullDrag      |   ture        | |
+| freeDrag      |	false       | |
+| stagePadding 	|   0           | 将显示区域左右留白，可以看到旁边的一部分内容 |
+| merge       	|   false       | |
+| mergeFit      |	true        | |
+| autoWidth     |   false       | |
+| nav           |   false       | 是否显示左右切换按钮 |
+| navText       |   [next,prev] | 左右切换按钮 显示的文字 |
+| navElement    |   'div'         | 左右切换按钮 display方式 |
+
+
+### 预览
+[demo展示](https://emloxe.github.io/common.plug-in/OwlCarousel2/demo/index.html)
+
+
+**备注**
+[github详细信息](https://github.com/OwlCarousel2/OwlCarousel2)
+

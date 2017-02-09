@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>测试OwlCarousel2</title>
+	<link rel="stylesheet" href="../assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="../assets/owl.theme.default.css">
+	<style type="text/css">
+	</style>
+
+</head>
+<body>
+
+<div class="owl-carousel">
+  <div><img class="lazy" src="../../images/big-1.jpg" ></div>
+  <div><img class="lazy" src="../../images/big-2.jpg" ></div>
+  <div><img class="lazy" src="../../images/big-3.jpg" ></div>
+  <div><img class="lazy" src="../../images/big-4.jpg" ></div>
+  <div><img class="lazy" src="../../images/big-5.jpg" ></div>
+  <div><img class="lazy" src="../../images/big-6.jpg" ></div>
+  <div><img class="lazy" src="../../images/big-7.jpg" ></div>
+</div>
+
+<script src="../../jquery/jquery-1.8.0.min.js"></script>
+<script src="../owl.carousel.min.js"></script>
+<script type="text/javascript">
+	$(".owl-carousel").owlCarousel({
+		merge: true,
+		items: 1,
+		nav: true,
+		navText: [1,2],
+		navElement: 'i',
+		dots: true
+	});
+</script>
+</body>
+</html>
