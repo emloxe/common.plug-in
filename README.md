@@ -207,7 +207,11 @@ $('.myscroll').myScroll({
 
 HTML结构
 ```html
-<div class="owl-carousel">
+<!-- 
+owl-carousel 对应默认样式
+owl-theme 对应主题样式
+ -->
+<div class="owl-carousel owl-theme">
   <div> Your Content </div>
   <div> Your Content </div>
   <div> Your Content </div>
@@ -229,21 +233,25 @@ $(".owl-carousel").owlCarousel();
 | 名称          | 默认值        |说明  |
 |:-------------:|:-------------:|:-----|
 | items         |	3           | 展示几个item |
-| margin     	|   0           | item右边距 |
-| loop          |	false       | |
-| center        |	false       | |
+| margin     	  | 0           | item右边距 |
+| loop          |	false       | 自动切换时，是否不停的切换 |
 | mouseDrag     |	ture        | 鼠标是否可以拖动item |
-| touchDrag 	|   ture        | |
-| pullDrag      |   ture        | |
+| touchDrag 	  | ture        | |
+| pullDrag      | ture        | |
 | freeDrag      |	false       | |
-| stagePadding 	|   0           | 将显示区域左右留白，可以看到旁边的一部分内容 |
-| merge       	|   false       | |
-| mergeFit      |	true        | |
-| autoWidth     |   false       | |
-| nav           |   false       | 是否显示左右切换按钮 |
-| navText       |   [next,prev] | 左右切换按钮 显示的文字 |
-| navElement    |   'div'         | 左右切换按钮 display方式 |
-
+| stagePadding 	| 0           | 将显示区域左右留白，可以看到旁边的一部分内容 |
+| autoWidth     | false       | 内部用元素自身的宽度，自适应 |
+| startPosition | 0           | 切换起始的位置，从0开始计算 |
+| nav           | false       | 是否显示左右切换按钮 |
+| navText       | [next,prev] | 左右切换按钮 显示的文字 |
+| navElement    | 'div'       | 左右切换按钮 display方式 |
+| dots          | true        | 是否显示下部切换的小圆点 |
+| autoplay      | false       | 是否自动切换 |
+| autoplayTimeout| 5000       | 切换停顿时间 |
+| autoplayHoverPause| false   | 鼠标移上切换是否暂停 |
+| autoplaySpeed | false       | 自动切换时是速度 |
+| navSpeed      | false       | 点击左右切换的按钮时的切换速度 |
+| dotsSpeed     |             | 点击小圆点的切换速度|
 
 ### 预览
 [demo展示](https://emloxe.github.io/common.plug-in/OwlCarousel2/demo/index.html)
