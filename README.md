@@ -54,7 +54,7 @@ $('img.lazy').lazyload();
 
 
 ### 预览
-[demo展示](https://emloxe.github.io/common.plug-in/jquery_lazyload/demo/index.html)
+[demo展示](https://emloxe.github.io/common.plugin/jquery_lazyload/demo/index.html)
 
 
 **备注**
@@ -110,7 +110,7 @@ callback |
 
 
 ### 预览
-[demo展示](https://emloxe.github.io/common.plug-in/echo/demo/index.html)
+[demo展示](https://emloxe.github.io/common.plugin/echo/demo/index.html)
 
 **备注**
 [详细信息](https://github.com/toddmotto/echo)
@@ -176,7 +176,7 @@ $('.myscroll').myScroll({
 
 
 ### 预览
-[demo展示](https://emloxe.github.io/common.plug-in/jQuery-rolling/demo/index.html)
+[demo展示](https://emloxe.github.io/common.plugin/jQuery-rolling/demo/index.html)
 
 
 
@@ -254,7 +254,7 @@ $(".owl-carousel").owlCarousel();
 | dotsSpeed     |             | 点击小圆点的切换速度|
 
 ### 预览
-[demo展示](https://emloxe.github.io/common.plug-in/OwlCarousel2/demo/index.html)
+[demo展示](https://emloxe.github.io/common.plugin/OwlCarousel2/demo/index.html)
 
 
 **备注**
