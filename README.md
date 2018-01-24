@@ -5,6 +5,7 @@
 * [jQuery Echo 图片延迟加载](#echo)
 * [jQuery 无缝向上滚动](#rolling)
 * [OwlCarousel2 轮播](#OwlCarousel)
+* [masonry 瀑布流插件](#masonry)
 
 
 
@@ -260,3 +261,81 @@ $(".owl-carousel").owlCarousel();
 **备注**
 [github详细信息](https://github.com/OwlCarousel2/OwlCarousel2)
 
+
+
+## <a id="masonry" href="masonry">masonry 瀑布流插件</a>
+不依赖jquery，瀑布流插件
+[官方网站](https://masonry.desandro.com/)
+
+### 使用方法
+
+
+载入js文件
+```html
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+```
+
+HTML结构
+```html
+<div class="grid">
+  <div class="grid-item"> Your Content </div>
+  <div class="grid-item"> Your Content </div>
+  <div class="grid-item"> Your Content </div>
+</div>
+```
+
+调用jquery使用方式
+```js
+$('.grid').masonry({
+  // options...
+  itemSelector: '.grid-item'
+});
+```
+
+调用js使用方式
+```js
+var grid = document.querySelector('.grid');
+var msnry = new Masonry( grid, {
+  // options...
+  itemSelector: '.grid-item'
+});
+// 或者
+var msnry = new Masonry( '.grid', {
+  // options...
+  itemSelector: '.grid-item'
+});
+```
+
+调用html使用方式
+```html
+<div class="grid" data-masonry='{ "itemSelector": ".grid-item"}'>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  ...
+</div>
+```
+
+
+
+### 参数配置
+
+### 添加项目
+```
+// does not work
+$.get( 'page2', function( content ) {
+  // HTML string added, but items not added to Masonry
+  $grid.append( content ).masonry( 'appended', content );
+});
+
+// does work
+$.get( 'page2', function( content ) {
+  // wrap content in jQuery object
+  var $content = $( content );
+  // add jQuery object
+  $grid.append( $content ).masonry( 'appended', $content );
+});
+```
+
+
+**备注**
+[github详细信息](https://github.com/desandro/masonry)
